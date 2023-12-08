@@ -29,6 +29,7 @@ std::string GetParam(std::string root, std::string key, std::string ini_path)
     std::wstring w_key = converter.from_bytes(key);
     std::wstring w_path = converter.from_bytes(ini_path);
 
+    
     GetPrivateProfileString(w_root.c_str(), w_key.c_str(), L"", buffer, sizeof(buffer) / sizeof(wchar_t), w_path.c_str());
     msg = buffer;
     return converter.to_bytes(msg);

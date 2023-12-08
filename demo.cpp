@@ -6,7 +6,7 @@
 int main()
 {
 
-    std::string path = "C:\\Project\\Cpp\\paramTest\\param.ini";
+    std::string path = "..//param.ini";
     int age = GetParam<int>("Setting","age",path);
     
     std::string str = GetParam<std::string>("Param","word",path);
